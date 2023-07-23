@@ -1,0 +1,212 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,700;1,100&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tektur', cursive;
+    scroll-behavior: smooth;
+    /* transition: 0.3s ease; */
+}
+
+::selection {
+    background-color: #922f57;
+}
+
+.mb-50 {
+    margin-bottom: 80px;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #4f1374, #5b6bff, #cad2ff);
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    /* text-transform: uppercase; */
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+    transition: all 0.6s;
+
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background-color: #FFF;
+    color: #922f57;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to top, #000000bd, transparent);
+    z-index: 100;
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img.planets {
+    mix-blend-mode: screen;
+}
+
+section img#cloudySmoke {
+    transform: rotateY(0.5turn);
+}
+
+
+section img#floatingRocks {
+    animation: floating 20s both infinite;
+}
+
+
+@keyframes floating {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@media (min-width:1920px) {
+    section {
+        padding-top: 600px;
+    }
+}
+
+
+#hero-text {
+    position: absolute;
+    color: transparent;
+    white-space: nowrap;
+    font-size: 5.5vw;
+    -webkit-text-stroke: #FFF 1px;
+}
+
+
+#exploreBtn {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: #fff;
+    color: #13293a;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+#sec {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    color: #FFF;
+    z-index: 500;
+
+}
+
+
+
+#sec h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#sec p {
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+
+.exploreSec {
+    background: radial-gradient(#0000003a, #000000f1 50%), url(/assets/img/doorNight.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.exploreSec .exploreSecText {
+    padding: 100px;
+    text-align: center;
+}
+
+.exploreSec p{
+    padding: 10px 100px;
+    line-height: 1.5;
+}
+
+.exploreSec h2 {
+    -webkit-text-stroke: #FFF 1px;
+    color: transparent;
+}
